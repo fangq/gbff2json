@@ -1,7 +1,7 @@
 #!/usr/bin/env perl 
 ###############################################################################
 #
-# A GeneBank GBFF file to JSON file converter
+# A GenBank GBFF file to JSON file converter
 #
 # Author:  Qianqian Fang <q.fang at neu.edu>
 # License: BSD 3-clause
@@ -17,7 +17,7 @@ use JSON 'to_json';
 use Tie::IxHash;
 
 if($#ARGV<0){
-	print("gbff2json.pl - converting GeneBank database file to a JSON/JData file
+	print("gbff2json.pl - converting GenBank database file to a JSON/JData file
 	Format: gbff2json.pl input.gbff > output.json\n");
 	exit 0;
 }
