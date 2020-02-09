@@ -31,12 +31,11 @@ tie my %obj3, "Tie::IxHash";
 
 while(<>){
 	next if(/^\s*$/);
-	last if(/^\/\/$/);
 	if(/^((\s*)(\S+)(\s+))(.*)/){
 		my $ln=$_;
 		$value=$4.$5;
-		if(length($2)==0){
-			if((keys %obj3)>0){
+		if(length($2)==0){ # a first level key start at the begining of the line
+			if((keys %obj3)>0){ # attaching lower-level objects
 				push(@{$obj2{$key2}},rmap(\%obj3));
 				%obj3=();
 				$key3="";
@@ -46,25 +45,26 @@ while(<>){
 				%obj2=();
 				$key2="";
 			}
-			push(@{$obj1{$3}}, $5);
+			last if(/^\/\/$/);
+			push(@{$obj1{$3}}, $5) if $5 ne '';
 			$key1=$3;
 			$lastobj=$obj1{$3};
-		}elsif(length($2)<12){
-			if((keys %obj3)>0){
+		}elsif(length($2)<12){ # a second level key starts within 12 spaces from the beginning
+			if((keys %obj3)>0){  # attaching lower-level objects
 				push(@{$obj2{$key2}},rmap(\%obj3));
 				%obj3=();
 				$key3="";
 			}
-			push(@{$obj2{$3}}, $5);
+			push(@{$obj2{$3}}, $5) if $5 ne '';
 			$key2=$3;
 			$lastobj=$obj2{$3};
-		}elsif($3 =~/^\/([a-z_]+)="{0,1}(.*)$/){
+		}elsif($3 =~/^\/([a-z_]+)="{0,1}(.*)$/){ # a 3rd level key starts with "/keyname=..."
 			$key3=$1;
 			$value=$2.$value;
 			$value=~s/"*\s*$//g;
 			push(@{$obj3{$key3}},$value);
 			$lastobj=$obj3{$key3};
-		}else{
+		}else{                       # appending line to the last object
 			$ln=~s/^\s+|"*\s+$//g;
 			if(join('',map { ref() eq 'HASH' ? 1 : 0} $lastobj) ==0){
 				${$lastobj}[0].= $ln;
@@ -75,6 +75,13 @@ while(<>){
 	}
 }
 %obj1=%{rmap(\%obj1)};
+
+# concatenate ORIGIN hash values into a single string
+if($obj1{'ORIGIN'}){
+	$obj1{'ORIGIN'}=join('',map { $obj1{'ORIGIN'}{$_}} keys %{$obj1{'ORIGIN'}});
+	$obj1{'ORIGIN'}=~s/\s//g;
+}
+
 print to_json(\%obj1,{utf8 => 1, pretty => 1});
 
 sub rmap{
