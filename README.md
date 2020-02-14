@@ -5,6 +5,26 @@
 * Version: 0.5
 * URL: http://github.com/fangq/covid19
 
+**Table of content**
+- [Overview](#overview)
+- [How to parse genomic data files](#how-to-parse-genomic-data-files)
+  * [Using data in Python](#using-data-in-python)
+    + [JSON files](#json-files)
+    + [JData files](#jdata-files)
+    + [Pickle files](#pickle-files)
+    + [HDF5 files](#hdf5-files)
+    + [MessagePack files](#messagepack-files)
+    + [How to access individual data records in Python](#how-to-access-individual-data-records-in-python)
+  * [Using data in MATLAB/Octave](#using-data-in-matlaboctave)
+    + [JSON files](#json-files-1)
+    + [JData files](#jdata-files-1)
+    + [MAT files](#mat-files)
+    + [HDF5 files](#hdf5-files-1)
+    + [MessagePack files](#messagepack-files-1)
+    + [How to access individual data records in MATLAB/Octave](#how-to-access-individual-data-records-in-matlaboctave)
+- [How to use the gbff2json converter](#how-to-use-the-gbff2json-converter)
+- [Contribute to this project](#contribute-to-this-project)
+
 ## Overview
 
 We provide a GenBank *.gbff* file to JSON converter and various converted 
