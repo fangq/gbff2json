@@ -246,7 +246,7 @@ to the original gbff data entry names:
 
 - the top-level keys (`LOCUS, VERSION, ORIGIN` ...) are converted to keep only capital form 
   for the first letter. One can revert to the all-caps version by adding the `"-C"` flag
-- the _matlab.json file contains a JSON structure with converted key-names to facilitate 
+- the \_matlab.json file contains a JSON structure with converted key-names to facilitate 
   data manipulation in MATLAB/Octave. Because special characters can not be used as structure
   field names, we converted range operators `xxxxx..xxxxx` to `From_xxxxx_to_xxxxx`, and replaced
   "/", "(", ")" and "," to "_"
