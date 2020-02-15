@@ -82,9 +82,14 @@ pip install jdata
 then open python, and run
 ```
 import jdata
-covid19=jdata.loadt('datafile.jdt');
+from collections import OrderedDict
+covid19=jdata.loadt('datafile.jdt',object_pairs_hook=OrderedDict);
 ```
-to load the text-based JData file, or 
+to load the text-based JData file, or first install the py-ubjson package
+```
+pip install py-ubjson
+```
+and then load the binary jdata file using
 ```
 import jdata
 covid19=jdata.loadb('datafile.jdb');
@@ -106,7 +111,7 @@ covid19=h5py.File('datafile.h5','r')
 
 #### MessagePack files
 
-First, install the pyjdata package via
+First, install the msgpack package via
 ```
 pip install msgpack
 ```
