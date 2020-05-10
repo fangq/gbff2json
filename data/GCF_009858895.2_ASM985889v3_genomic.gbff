@@ -1,15 +1,34 @@
-LOCUS       NC_045512              29903 bp ss-RNA     linear   VRL 17-JAN-2020
-DEFINITION  Wuhan seafood market pneumonia virus isolate Wuhan-Hu-1, complete
-            genome.
+LOCUS       NC_045512              29903 bp ss-RNA     linear   VRL 30-MAR-2020
+DEFINITION  Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1,
+            complete genome.
 ACCESSION   NC_045512
 VERSION     NC_045512.2
 DBLINK      BioProject: PRJNA485481
 KEYWORDS    RefSeq.
-SOURCE      Wuhan seafood market pneumonia virus
-  ORGANISM  Wuhan seafood market pneumonia virus
+SOURCE      Severe acute respiratory syndrome coronavirus 2 (SARS-CoV2)
+  ORGANISM  Severe acute respiratory syndrome coronavirus 2
             Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae;
-            Orthocoronavirinae; Betacoronavirus; unclassified Betacoronavirus.
-REFERENCE   1  (bases 1 to 29903)
+            Orthocoronavirinae; Betacoronavirus; Sarbecovirus.
+REFERENCE   1  (bases 13476 to 13503)
+  AUTHORS   Baranov,P.V., Henderson,C.M., Anderson,C.B., Gesteland,R.F.,
+            Atkins,J.F. and Howard,M.T.
+  TITLE     Programmed ribosomal frameshifting in decoding the SARS-CoV genome
+  JOURNAL   Virology 332 (2), 498-510 (2005)
+   PUBMED   15680415
+REFERENCE   2  (bases 29728 to 29768)
+  AUTHORS   Robertson,M.P., Igel,H., Baertsch,R., Haussler,D., Ares,M. Jr. and
+            Scott,W.G.
+  TITLE     The structure of a rigorously conserved RNA element within the SARS
+            virus genome
+  JOURNAL   PLoS Biol. 3 (1), e5 (2005)
+   PUBMED   15630477
+REFERENCE   3  (bases 29609 to 29657)
+  AUTHORS   Williams,G.D., Chang,R.Y. and Brian,D.A.
+  TITLE     A phylogenetically conserved hairpin-type 3' untranslated region
+            pseudoknot functions in coronavirus RNA replication
+  JOURNAL   J. Virol. 73 (10), 8349-8355 (1999)
+   PUBMED   10482585
+REFERENCE   4  (bases 1 to 29903)
   AUTHORS   Wu,F., Zhao,S., Yu,B., Chen,Y.-M., Wang,W., Hu,Y., Song,Z.-G.,
             Tao,Z.-W., Tian,J.-H., Pei,Y.-Y., Yuan,M.L., Zhang,Y.-L.,
             Dai,F.-H., Liu,Y., Wang,Q.-M., Zheng,J.-J., Xu,L., Holmes,E.C. and
@@ -17,12 +36,12 @@ REFERENCE   1  (bases 1 to 29903)
   TITLE     A novel coronavirus associated with a respiratory disease in Wuhan
             of Hubei province, China
   JOURNAL   Unpublished
-REFERENCE   2  (bases 1 to 29903)
+REFERENCE   5  (bases 1 to 29903)
   CONSRTM   NCBI Genome Project
   TITLE     Direct Submission
   JOURNAL   Submitted (17-JAN-2020) National Center for Biotechnology
             Information, NIH, Bethesda, MD 20894, USA
-REFERENCE   3  (bases 1 to 29903)
+REFERENCE   6  (bases 1 to 29903)
   AUTHORS   Wu,F., Zhao,S., Yu,B., Chen,Y.-M., Wang,W., Hu,Y., Song,Z.-G.,
             Tao,Z.-W., Tian,J.-H., Pei,Y.-Y., Yuan,M.L., Zhang,Y.-L.,
             Dai,F.-H., Liu,Y., Wang,Q.-M., Zheng,J.-J., Xu,L., Holmes,E.C. and
@@ -30,9 +49,18 @@ REFERENCE   3  (bases 1 to 29903)
   TITLE     Direct Submission
   JOURNAL   Submitted (05-JAN-2020) Shanghai Public Health Clinical Center &
             School of Public Health, Fudan University, Shanghai, China
-COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
-            NCBI review. The reference sequence is identical to MN908947.
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence is identical to MN908947.
             On Jan 17, 2020 this sequence version replaced NC_045512.1.
+            Annotation was added using homology to SARSr-CoV NC_004718.3. ###
+            Formerly called 'Wuhan seafood market pneumonia virus.' If you have
+            questions or suggestions, please email us at info@ncbi.nlm.nih.gov
+            and include the accession number NC_045512.### Protein structures
+            can be found at
+            https://www.ncbi.nlm.nih.gov/structure/?term=sars-cov-2.### Find
+            all other Severe acute respiratory syndrome coronavirus 2
+            (SARS-CoV-2) sequences at
+            https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/
             
             ##Assembly-Data-START##
             Assembly Method       :: Megahit v. V1.1.3
@@ -41,7 +69,8 @@ COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
             COMPLETENESS: full length.
 FEATURES             Location/Qualifiers
      source          1..29903
-                     /organism="Wuhan seafood market pneumonia virus"
+                     /organism="Severe acute respiratory syndrome coronavirus
+                     2"
                      /mol_type="genomic RNA"
                      /isolate="Wuhan-Hu-1"
                      /host="Homo sapiens"
@@ -50,18 +79,18 @@ FEATURES             Location/Qualifiers
                      /collection_date="Dec-2019"
      5'UTR           1..265
      gene            266..21555
-                     /gene="orf1ab"
+                     /gene="ORF1ab"
                      /locus_tag="GU280_gp01"
-                     /db_xref="GeneID:43560238"
+                     /db_xref="GeneID:43740578"
      CDS             join(266..13468,13468..21555)
-                     /gene="orf1ab"
+                     /gene="ORF1ab"
                      /locus_tag="GU280_gp01"
                      /ribosomal_slippage
-                     /note="translated by -1 ribosomal frameshift"
+                     /note="pp1ab; translated by -1 ribosomal frameshift"
                      /codon_start=1
-                     /product="orf1ab polyprotein (pp1ab)"
+                     /product="ORF1ab polyprotein"
                      /protein_id="YP_009724389.1"
-                     /db_xref="GeneID:43560238"
+                     /db_xref="GeneID:43740578"
                      /translation="MESLVPGFNEKTHVQLSLPVLQVRDVLVRGFGDSVEEVLSEARQ
                      HLKDGTCGLVEVEKGVLPQLEQPYVFIKRSDARTAPHGHVMVELVAELEGIQYGRSGE
                      TLGVLVPHVGEIPVAYRKVLLRKNGNKGAGGHSYGADLKSFDLGDELGTDPYEDFQEN
@@ -185,18 +214,300 @@ FEATURES             Location/Qualifiers
                      FFTYICGFIQQKLALGGSVAIKITEHSWNADLYKLMGHFAWWTAFVTNVNASSSEAFL
                      IGCNYLGKPREQIDGYVMHANYIFWRNTNPIQLSSYSLFDMSKFPLKLRGTAVMSLKE
                      GQINDMILSLLSKGRLIIRENNRVVISSDVLVNN"
+     mat_peptide     266..805
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="leader protein"
+                     /note="nsp1; produced by both pp1a and pp1ab"
+                     /protein_id="YP_009725297.1"
+     mat_peptide     806..2719
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp2"
+                     /note="produced by both pp1a and pp1ab"
+                     /protein_id="YP_009725298.1"
+     mat_peptide     2720..8554
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp3"
+                     /note="former nsp1; conserved domains are: N-terminal
+                     acidic (Ac), predicted phosphoesterase, papain-like
+                     proteinase, Y-domain, transmembrane domain 1 (TM1),
+                     adenosine diphosphate-ribose 1''-phosphatase (ADRP);
+                     produced by both pp1a and pp1ab"
+                     /protein_id="YP_009725299.1"
+     mat_peptide     8555..10054
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp4"
+                     /note="nsp4B_TM; contains transmembrane domain 2 (TM2);
+                     produced by both pp1a and pp1ab"
+                     /protein_id="YP_009725300.1"
+     mat_peptide     10055..10972
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="3C-like proteinase"
+                     /note="nsp5A_3CLpro and nsp5B_3CLpro; main proteinase
+                     (Mpro); mediates cleavages downstream of nsp4. 3D
+                     structure of the SARSr-CoV homolog has been determined
+                     (Yang et al., 2003); produced by both pp1a and pp1ab"
+                     /protein_id="YP_009725301.1"
+     mat_peptide     10973..11842
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp6"
+                     /note="nsp6_TM; putative transmembrane domain; produced by
+                     both pp1a and pp1ab"
+                     /protein_id="YP_009725302.1"
+     mat_peptide     11843..12091
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp7"
+                     /note="produced by both pp1a and pp1ab"
+                     /protein_id="YP_009725303.1"
+     mat_peptide     12092..12685
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp8"
+                     /note="produced by both pp1a and pp1ab"
+                     /protein_id="YP_009725304.1"
+     mat_peptide     12686..13024
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp9"
+                     /note="ssRNA-binding protein; produced by both pp1a and
+                     pp1ab"
+                     /protein_id="YP_009725305.1"
+     mat_peptide     13025..13441
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp10"
+                     /note="nsp10_CysHis; formerly known as growth-factor-like
+                     protein (GFL); produced by both pp1a and pp1ab"
+                     /protein_id="YP_009725306.1"
+     mat_peptide     join(13442..13468,13468..16236)
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="RNA-dependent RNA polymerase"
+                     /note="nsp12; NiRAN and RdRp; produced by pp1ab only"
+                     /protein_id="YP_009725307.1"
+     mat_peptide     16237..18039
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="helicase"
+                     /note="nsp13_ZBD, nsp13_TB, and nsp_HEL1core; zinc-binding
+                     domain (ZD), NTPase/helicase domain (HEL), RNA
+                     5'-triphosphatase; produced by pp1ab only"
+                     /protein_id="YP_009725308.1"
+     mat_peptide     18040..19620
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="3'-to-5' exonuclease"
+                     /note="nsp14A2_ExoN and nsp14B_NMT; produced by pp1ab
+                     only"
+                     /protein_id="YP_009725309.1"
+     mat_peptide     19621..20658
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="endoRNAse"
+                     /note="nsp15-A1 and nsp15B-NendoU; produced by pp1ab only"
+                     /protein_id="YP_009725310.1"
+     mat_peptide     20659..21552
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="2'-O-ribose methyltransferase"
+                     /note="nsp16_OMT; 2'-o-MT; produced by pp1ab only"
+                     /protein_id="YP_009725311.1"
+     CDS             266..13483
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /note="pp1a"
+                     /codon_start=1
+                     /product="ORF1a polyprotein"
+                     /protein_id="YP_009725295.1"
+                     /db_xref="GeneID:43740578"
+                     /translation="MESLVPGFNEKTHVQLSLPVLQVRDVLVRGFGDSVEEVLSEARQ
+                     HLKDGTCGLVEVEKGVLPQLEQPYVFIKRSDARTAPHGHVMVELVAELEGIQYGRSGE
+                     TLGVLVPHVGEIPVAYRKVLLRKNGNKGAGGHSYGADLKSFDLGDELGTDPYEDFQEN
+                     WNTKHSSGVTRELMRELNGGAYTRYVDNNFCGPDGYPLECIKDLLARAGKASCTLSEQ
+                     LDFIDTKRGVYCCREHEHEIAWYTERSEKSYELQTPFEIKLAKKFDTFNGECPNFVFP
+                     LNSIIKTIQPRVEKKKLDGFMGRIRSVYPVASPNECNQMCLSTLMKCDHCGETSWQTG
+                     DFVKATCEFCGTENLTKEGATTCGYLPQNAVVKIYCPACHNSEVGPEHSLAEYHNESG
+                     LKTILRKGGRTIAFGGCVFSYVGCHNKCAYWVPRASANIGCNHTGVVGEGSEGLNDNL
+                     LEILQKEKVNINIVGDFKLNEEIAIILASFSASTSAFVETVKGLDYKAFKQIVESCGN
+                     FKVTKGKAKKGAWNIGEQKSILSPLYAFASEAARVVRSIFSRTLETAQNSVRVLQKAA
+                     ITILDGISQYSLRLIDAMMFTSDLATNNLVVMAYITGGVVQLTSQWLTNIFGTVYEKL
+                     KPVLDWLEEKFKEGVEFLRDGWEIVKFISTCACEIVGGQIVTCAKEIKESVQTFFKLV
+                     NKFLALCADSIIIGGAKLKALNLGETFVTHSKGLYRKCVKSREETGLLMPLKAPKEII
+                     FLEGETLPTEVLTEEVVLKTGDLQPLEQPTSEAVEAPLVGTPVCINGLMLLEIKDTEK
+                     YCALAPNMMVTNNTFTLKGGAPTKVTFGDDTVIEVQGYKSVNITFELDERIDKVLNEK
+                     CSAYTVELGTEVNEFACVVADAVIKTLQPVSELLTPLGIDLDEWSMATYYLFDESGEF
+                     KLASHMYCSFYPPDEDEEEGDCEEEEFEPSTQYEYGTEDDYQGKPLEFGATSAALQPE
+                     EEQEEDWLDDDSQQTVGQQDGSEDNQTTTIQTIVEVQPQLEMELTPVVQTIEVNSFSG
+                     YLKLTDNVYIKNADIVEEAKKVKPTVVVNAANVYLKHGGGVAGALNKATNNAMQVESD
+                     DYIATNGPLKVGGSCVLSGHNLAKHCLHVVGPNVNKGEDIQLLKSAYENFNQHEVLLA
+                     PLLSAGIFGADPIHSLRVCVDTVRTNVYLAVFDKNLYDKLVSSFLEMKSEKQVEQKIA
+                     EIPKEEVKPFITESKPSVEQRKQDDKKIKACVEEVTTTLEETKFLTENLLLYIDINGN
+                     LHPDSATLVSDIDITFLKKDAPYIVGDVVQEGVLTAVVIPTKKAGGTTEMLAKALRKV
+                     PTDNYITTYPGQGLNGYTVEEAKTVLKKCKSAFYILPSIISNEKQEILGTVSWNLREM
+                     LAHAEETRKLMPVCVETKAIVSTIQRKYKGIKIQEGVVDYGARFYFYTSKTTVASLIN
+                     TLNDLNETLVTMPLGYVTHGLNLEEAARYMRSLKVPATVSVSSPDAVTAYNGYLTSSS
+                     KTPEEHFIETISLAGSYKDWSYSGQSTQLGIEFLKRGDKSVYYTSNPTTFHLDGEVIT
+                     FDNLKTLLSLREVRTIKVFTTVDNINLHTQVVDMSMTYGQQFGPTYLDGADVTKIKPH
+                     NSHEGKTFYVLPNDDTLRVEAFEYYHTTDPSFLGRYMSALNHTKKWKYPQVNGLTSIK
+                     WADNNCYLATALLTLQQIELKFNPPALQDAYYRARAGEAANFCALILAYCNKTVGELG
+                     DVRETMSYLFQHANLDSCKRVLNVVCKTCGQQQTTLKGVEAVMYMGTLSYEQFKKGVQ
+                     IPCTCGKQATKYLVQQESPFVMMSAPPAQYELKHGTFTCASEYTGNYQCGHYKHITSK
+                     ETLYCIDGALLTKSSEYKGPITDVFYKENSYTTTIKPVTYKLDGVVCTEIDPKLDNYY
+                     KKDNSYFTEQPIDLVPNQPYPNASFDNFKFVCDNIKFADDLNQLTGYKKPASRELKVT
+                     FFPDLNGDVVAIDYKHYTPSFKKGAKLLHKPIVWHVNNATNKATYKPNTWCIRCLWST
+                     KPVETSNSFDVLKSEDAQGMDNLACEDLKPVSEEVVENPTIQKDVLECNVKTTEVVGD
+                     IILKPANNSLKITEEVGHTDLMAAYVDNSSLTIKKPNELSRVLGLKTLATHGLAAVNS
+                     VPWDTIANYAKPFLNKVVSTTTNIVTRCLNRVCTNYMPYFFTLLLQLCTFTRSTNSRI
+                     KASMPTTIAKNTVKSVGKFCLEASFNYLKSPNFSKLINIIIWFLLLSVCLGSLIYSTA
+                     ALGVLMSNLGMPSYCTGYREGYLNSTNVTIATYCTGSIPCSVCLSGLDSLDTYPSLET
+                     IQITISSFKWDLTAFGLVAEWFLAYILFTRFFYVLGLAAIMQLFFSYFAVHFISNSWL
+                     MWLIINLVQMAPISAMVRMYIFFASFYYVWKSYVHVVDGCNSSTCMMCYKRNRATRVE
+                     CTTIVNGVRRSFYVYANGGKGFCKLHNWNCVNCDTFCAGSTFISDEVARDLSLQFKRP
+                     INPTDQSSYIVDSVTVKNGSIHLYFDKAGQKTYERHSLSHFVNLDNLRANNTKGSLPI
+                     NVIVFDGKSKCEESSAKSASVYYSQLMCQPILLLDQALVSDVGDSAEVAVKMFDAYVN
+                     TFSSTFNVPMEKLKTLVATAEAELAKNVSLDNVLSTFISAARQGFVDSDVETKDVVEC
+                     LKLSHQSDIEVTGDSCNNYMLTYNKVENMTPRDLGACIDCSARHINAQVAKSHNIALI
+                     WNVKDFMSLSEQLRKQIRSAAKKNNLPFKLTCATTRQVVNVVTTKIALKGGKIVNNWL
+                     KQLIKVTLVFLFVAAIFYLITPVHVMSKHTDFSSEIIGYKAIDGGVTRDIASTDTCFA
+                     NKHADFDTWFSQRGGSYTNDKACPLIAAVITREVGFVVPGLPGTILRTTNGDFLHFLP
+                     RVFSAVGNICYTPSKLIEYTDFATSACVLAAECTIFKDASGKPVPYCYDTNVLEGSVA
+                     YESLRPDTRYVLMDGSIIQFPNTYLEGSVRVVTTFDSEYCRHGTCERSEAGVCVSTSG
+                     RWVLNNDYYRSLPGVFCGVDAVNLLTNMFTPLIQPIGALDISASIVAGGIVAIVVTCL
+                     AYYFMRFRRAFGEYSHVVAFNTLLFLMSFTVLCLTPVYSFLPGVYSVIYLYLTFYLTN
+                     DVSFLAHIQWMVMFTPLVPFWITIAYIICISTKHFYWFFSNYLKRRVVFNGVSFSTFE
+                     EAALCTFLLNKEMYLKLRSDVLLPLTQYNRYLALYNKYKYFSGAMDTTSYREAACCHL
+                     AKALNDFSNSGSDVLYQPPQTSITSAVLQSGFRKMAFPSGKVEGCMVQVTCGTTTLNG
+                     LWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVL
+                     KLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSC
+                     GSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVN
+                     VLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAV
+                     LDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQSAVKRTIKGTHHW
+                     LLLTILTSLLVLVQSTQWSLFFFLYENAFLPFAMGIIAMSAFAMMFVKHKHAFLCLFL
+                     LPSLATVAYFNMVYMPASWVMRIMTWLDMVDTSLSGFKLKDCVMYASAVVLLILMTAR
+                     TVYDDGARRVWTLMNVLTLVYKVYYGNALDQAISMWALIISVTSNYSGVVTTVMFLAR
+                     GIVFMCVEYCPIFFITGNTLQCIMLVYCFLGYFCTCYFGLFCLLNRYFRLTLGVYDYL
+                     VSTQEFRYMNSQGLLPPKNSIDAFKLNIKLLGVGGKPCIKVATVQSKMSDVKCTSVVL
+                     LSVLQQLRVESSSKLWAQCVQLHNDILLAKDTTEAFEKMVSLLSVLLSMQGAVDINKL
+                     CEEMLDNRATLQAIASEFSSLPSYAAFATAQEAYEQAVANGDSEVVLKKLKKSLNVAK
+                     SEFDRDAAMQRKLEKMADQAMTQMYKQARSEDKRAKVTSAMQTMLFTMLRKLDNDALN
+                     NIINNARDGCVPLNIIPLTTAAKLMVVIPDYNTYKNTCDGTTFTYASALWEIQQVVDA
+                     DSKIVQLSEISMDNSPNLAWPLIVTALRANSAVKLQNNELSPVALRQMSCAAGTTQTA
+                     CTDDNALAYYNTTKGGRFVLALLSDLQDLKWARFPKSDGTGTIYTELEPPCRFVTDTP
+                     KGPKVKYLYFIKGLNNLNRGMVLGSLAATVRLQAGNATEVPANSTVLSFCAFAVDAAK
+                     AYKDYLASGGQPITNCVKMLCTHTGTGQAITVTPEANMDQESFGGASCCLYCRCHIDH
+                     PNPKGFCDLKGKYVQIPTTCANDPVGFTLKNTVCTVCGMWKGYGCSCDQLREPMLQSA
+                     DAQSFLNGFAV"
+     mat_peptide     266..805
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="leader protein"
+                     /note="nsp1; produced by both pp1a and pp1ab"
+                     /protein_id="YP_009742608.1"
+     mat_peptide     806..2719
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp2"
+                     /note="produced by both pp1a and pp1ab"
+                     /protein_id="YP_009742609.1"
+     mat_peptide     2720..8554
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp3"
+                     /note="former nsp1; conserved domains are: N-terminal
+                     acidic (Ac), predicted phosphoesterase, papain-like
+                     proteinase, Y-domain, transmembrane domain 1 (TM1),
+                     adenosine diphosphate-ribose 1''-phosphatase (ADRP);
+                     produced by both pp1a and pp1ab"
+                     /protein_id="YP_009742610.1"
+     mat_peptide     8555..10054
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp4"
+                     /note="nsp4B_TM; contains transmembrane domain 2 (TM2);
+                     produced by both pp1a and pp1ab"
+                     /protein_id="YP_009742611.1"
+     mat_peptide     10055..10972
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="3C-like proteinase"
+                     /note="nsp5A_3CLpro and nsp5B_3CLpro; main proteinase
+                     (Mpro); mediates cleavages downstream of nsp4. 3D
+                     structure of the SARSr-CoV homolog has been determined
+                     (Yang et al., 2003); produced by both pp1a and pp1ab"
+                     /protein_id="YP_009742612.1"
+     mat_peptide     10973..11842
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp6"
+                     /note="nsp6_TM; putative transmembrane domain; produced by
+                     both pp1a and pp1ab"
+                     /protein_id="YP_009742613.1"
+     mat_peptide     11843..12091
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp7"
+                     /note="produced by both pp1a and pp1ab"
+                     /protein_id="YP_009742614.1"
+     mat_peptide     12092..12685
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp8"
+                     /note="produced by both pp1a and pp1ab"
+                     /protein_id="YP_009742615.1"
+     mat_peptide     12686..13024
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp9"
+                     /note="ssRNA-binding protein; produced by both pp1a and
+                     pp1ab"
+                     /protein_id="YP_009742616.1"
+     mat_peptide     13025..13441
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp10"
+                     /note="nsp10_CysHis; formerly known as growth-factor-like
+                     protein (GFL); produced by both pp1a and pp1ab"
+                     /protein_id="YP_009742617.1"
+     mat_peptide     13442..13480
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /product="nsp11"
+                     /note="produced by pp1a only"
+                     /protein_id="YP_009725312.1"
+     stem_loop       13476..13503
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /inference="COORDINATES:
+                     profile:Rfam-release-14.1:RF00507,Infernal:1.1.2"
+                     /function="Coronavirus frameshifting stimulation element
+                     stem-loop 1"
+     stem_loop       13488..13542
+                     /gene="ORF1ab"
+                     /locus_tag="GU280_gp01"
+                     /inference="COORDINATES:
+                     profile:profile:Rfam-release-14.1:RF00507,Infernal:1.1.2"
+                     /function="Coronavirus frameshifting stimulation element
+                     stem-loop 2"
      gene            21563..25384
                      /gene="S"
                      /locus_tag="GU280_gp02"
-                     /db_xref="GeneID:43560230"
+                     /gene_synonym="spike glycoprotein"
+                     /db_xref="GeneID:43740568"
      CDS             21563..25384
                      /gene="S"
                      /locus_tag="GU280_gp02"
-                     /note="structural protein"
+                     /gene_synonym="spike glycoprotein"
+                     /note="structural protein; spike protein"
                      /codon_start=1
                      /product="surface glycoprotein"
                      /protein_id="YP_009724390.1"
-                     /db_xref="GeneID:43560230"
+                     /db_xref="GeneID:43740568"
                      /translation="MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFR
                      SSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIR
                      GWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVY
@@ -223,14 +534,14 @@ FEATURES             Location/Qualifiers
      gene            25393..26220
                      /gene="ORF3a"
                      /locus_tag="GU280_gp03"
-                     /db_xref="GeneID:43560231"
+                     /db_xref="GeneID:43740569"
      CDS             25393..26220
                      /gene="ORF3a"
                      /locus_tag="GU280_gp03"
                      /codon_start=1
                      /product="ORF3a protein"
                      /protein_id="YP_009724391.1"
-                     /db_xref="GeneID:43560231"
+                     /db_xref="GeneID:43740569"
                      /translation="MDLFMRIFTIGTVTLKQGEIKDATPSDFVRATATIPIQASLPFG
                      WLIVGVALLAVFQSASKIITLKKRWQLALSKGVHFVCNLLLLFVTVYSHLLLVAAGLE
                      APFLYLYALVYFLQSINFVRIIMRLWLCWKCRSKNPLLYDANYFLCWHTNCYDYCIPY
@@ -239,29 +550,29 @@ FEATURES             Location/Qualifiers
      gene            26245..26472
                      /gene="E"
                      /locus_tag="GU280_gp04"
-                     /db_xref="GeneID:43560232"
+                     /db_xref="GeneID:43740570"
      CDS             26245..26472
                      /gene="E"
                      /locus_tag="GU280_gp04"
-                     /note="structural protein; E protein"
+                     /note="ORF4; structural protein; E protein"
                      /codon_start=1
                      /product="envelope protein"
                      /protein_id="YP_009724392.1"
-                     /db_xref="GeneID:43560232"
+                     /db_xref="GeneID:43740570"
                      /translation="MYSFVSEETGTLIVNSVLLFLAFVVFLLVTLAILTALRLCAYCC
                      NIVNVSLVKPSFYVYSRVKNLNSSRVPDLLV"
      gene            26523..27191
                      /gene="M"
                      /locus_tag="GU280_gp05"
-                     /db_xref="GeneID:43560233"
+                     /db_xref="GeneID:43740571"
      CDS             26523..27191
                      /gene="M"
                      /locus_tag="GU280_gp05"
-                     /note="structural protein"
+                     /note="ORF5; structural protein"
                      /codon_start=1
                      /product="membrane glycoprotein"
                      /protein_id="YP_009724393.1"
-                     /db_xref="GeneID:43560233"
+                     /db_xref="GeneID:43740571"
                      /translation="MADSNGTITVEELKKLLEQWNLVIGFLFLTWICLLQFAYANRNR
                      FLYIIKLIFLWLLWPVTLACFVLAAVYRINWITGGIAIAMACLVGLMWLSYFIASFRL
                      FARTRSMWSFNPETNILLNVPLHGTILTRPLLESELVIGAVILRGHLRIAGHHLGRCD
@@ -270,56 +581,68 @@ FEATURES             Location/Qualifiers
      gene            27202..27387
                      /gene="ORF6"
                      /locus_tag="GU280_gp06"
-                     /db_xref="GeneID:43560234"
+                     /db_xref="GeneID:43740572"
      CDS             27202..27387
                      /gene="ORF6"
                      /locus_tag="GU280_gp06"
                      /codon_start=1
                      /product="ORF6 protein"
                      /protein_id="YP_009724394.1"
-                     /db_xref="GeneID:43560234"
+                     /db_xref="GeneID:43740572"
                      /translation="MFHLVDFQVTIAEILLIIMRTFKVSIWNLDYIINLIIKNLSKSL
                      TENKYSQLDEEQPMEID"
      gene            27394..27759
                      /gene="ORF7a"
                      /locus_tag="GU280_gp07"
-                     /db_xref="GeneID:43560235"
+                     /db_xref="GeneID:43740573"
      CDS             27394..27759
                      /gene="ORF7a"
                      /locus_tag="GU280_gp07"
                      /codon_start=1
                      /product="ORF7a protein"
                      /protein_id="YP_009724395.1"
-                     /db_xref="GeneID:43560235"
+                     /db_xref="GeneID:43740573"
                      /translation="MKIILFLALITLATCELYHYQECVRGTTVLLKEPCSSGTYEGNS
                      PFHPLADNKFALTCFSTQFAFACPDGVKHVYQLRARSVSPKLFIRQEEVQELYSPIFL
                      IVAAIVFITLCFTLKRKTE"
+     gene            27756..27887
+                     /gene="ORF7b"
+                     /locus_tag="GU280_gp08"
+                     /db_xref="GeneID:43740574"
+     CDS             27756..27887
+                     /gene="ORF7b"
+                     /locus_tag="GU280_gp08"
+                     /codon_start=1
+                     /product="ORF7b"
+                     /protein_id="YP_009725318.1"
+                     /db_xref="GeneID:43740574"
+                     /translation="MIELSLIDFYLCFLAFLLFLVLIMLIIFWFSLELQDHNETCHA"
      gene            27894..28259
                      /gene="ORF8"
-                     /locus_tag="GU280_gp08"
-                     /db_xref="GeneID:43560236"
+                     /locus_tag="GU280_gp09"
+                     /db_xref="GeneID:43740577"
      CDS             27894..28259
                      /gene="ORF8"
-                     /locus_tag="GU280_gp08"
+                     /locus_tag="GU280_gp09"
                      /codon_start=1
                      /product="ORF8 protein"
                      /protein_id="YP_009724396.1"
-                     /db_xref="GeneID:43560236"
+                     /db_xref="GeneID:43740577"
                      /translation="MKFLVFLGIITTVAAFHQECSLQSCTQHQPYVVDDPCPIHFYSK
                      WYIRVGARKSAPLIELCVDEAGSKSPIQYIDIGNYTVSCLPFTINCQEPKLGSLVVRC
                      SFYEDFLEYHDVRVVLDFI"
      gene            28274..29533
                      /gene="N"
-                     /locus_tag="GU280_gp09"
-                     /db_xref="GeneID:43560237"
+                     /locus_tag="GU280_gp10"
+                     /db_xref="GeneID:43740575"
      CDS             28274..29533
                      /gene="N"
-                     /locus_tag="GU280_gp09"
-                     /note="structural protein"
+                     /locus_tag="GU280_gp10"
+                     /note="ORF9; structural protein"
                      /codon_start=1
                      /product="nucleocapsid phosphoprotein"
                      /protein_id="YP_009724397.2"
-                     /db_xref="GeneID:43560237"
+                     /db_xref="GeneID:43740575"
                      /translation="MSDNGPQNQRNAPRITFGGPSDSTGSNQNGERSGARSKQRRPQG
                      LPNNTASWFTALTQHGKEDLKFPRGQGVPINTNSSPDDQIGYYRRATRRIRGGDGKMK
                      DLSPRWYFYYLGTGPEAGLPYGANKDGIIWVATEGALNTPKDHIGTRNPANNAAIVLQ
@@ -330,17 +653,38 @@ FEATURES             Location/Qualifiers
                      TLLPAADLDDFSKQLQQSMSSADSTQA"
      gene            29558..29674
                      /gene="ORF10"
-                     /locus_tag="GU280_gp10"
-                     /db_xref="GeneID:43569679"
+                     /locus_tag="GU280_gp11"
+                     /db_xref="GeneID:43740576"
      CDS             29558..29674
                      /gene="ORF10"
-                     /locus_tag="GU280_gp10"
+                     /locus_tag="GU280_gp11"
                      /codon_start=1
                      /product="ORF10 protein"
                      /protein_id="YP_009725255.1"
-                     /db_xref="GeneID:43569679"
+                     /db_xref="GeneID:43740576"
                      /translation="MGYINVFAFPFTIYSLLLCRMNSRNYIAQVDVVNFNLT"
+     stem_loop       29609..29644
+                     /gene="ORF10"
+                     /locus_tag="GU280_gp11"
+                     /inference="COORDINATES:
+                     profile::Rfam-release-14.1:RF00165,Infernal:1.1.2"
+                     /function="Coronavirus 3' UTR pseudoknot stem-loop 1"
+     stem_loop       29629..29657
+                     /gene="ORF10"
+                     /locus_tag="GU280_gp11"
+                     /inference="COORDINATES:
+                     profile::Rfam-release-14.1:RF00165,Infernal:1.1.2"
+                     /function="Coronavirus 3' UTR pseudoknot stem-loop 2"
      3'UTR           29675..29903
+     stem_loop       29728..29768
+                     /inference="COORDINATES:
+                     profile:Rfam-release-14.1:RF00164,Infernal:1.1.2"
+                     /note="basepair exception: alignment to the Rfam model
+                     implies coordinates 29740:29758 form a noncanonical C:T
+                     basepair, but the homologous positions form a highly
+                     conserved C:G basepair in other viruses, including SARS
+                     (NC_004718.3)"
+                     /function="Coronavirus 3' stem-loop II-like motif (s2m)"
 ORIGIN      
         1 attaaaggtt tataccttcc caggtaacaa accaaccaac tttcgatctc ttgtagatct
        61 gttctctaaa cgaactttaa aatctgtgtg gctgtcactc ggctgcatgc ttagtgcact
