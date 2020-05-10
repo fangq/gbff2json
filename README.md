@@ -3,7 +3,7 @@
 * Author: Qianqian Fang <q.fang at neu.edu>
 * License: Data files in the data folder are in the public domain; BSD License for codes in the src folder
 * Version: 0.5
-* URL: http://github.com/fangq/covid19
+* URL: http://github.com/fangq/gbff2json
 
 **Table of content**
 - [Overview](#overview)
