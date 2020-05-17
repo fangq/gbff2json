@@ -130,7 +130,7 @@ One can access the individual subfields via python's standard object indexing an
 example, 
 
 ```
-  covid19('Version')   # this prints the Version subfield in the top level
+  covid19['Version']   # this prints the Version subfield in the top level
   covid19['Features']['Location/Qualifiers']['gene'].keys()         # print the gene positions
   covid19['Features']['Location/Qualifiers']['gene']['266..21555']  # print the gene between positions 266 and 21555
   len(covid19['Origin'])     # print the genome sequence length
