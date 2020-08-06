@@ -86,10 +86,7 @@ import jdata
 from collections import OrderedDict
 covid19=jdata.loadt('datafile.jdt',object_pairs_hook=OrderedDict);
 ```
-to load the text-based JData file, or first install the py-ubjson package
-
-```
-and then load the binary jdata file using
+to load the text-based JData file, or
 ```
 import jdata
 covid19=jdata.loadb('datafile.jdb');
