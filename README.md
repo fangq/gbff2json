@@ -77,6 +77,7 @@ if you do not attach `object_pairs_hook=OrderedDict` in the above command, the g
 First, install the pyjdata package via
 ```
 pip install jdata
+pip install bjdata
 ```
 
 then open python, and run
@@ -86,8 +87,7 @@ from collections import OrderedDict
 covid19=jdata.loadt('datafile.jdt',object_pairs_hook=OrderedDict);
 ```
 to load the text-based JData file, or first install the py-ubjson package
-```
-pip install py-ubjson
+
 ```
 and then load the binary jdata file using
 ```
@@ -250,6 +250,23 @@ to the original gbff data entry names:
   data manipulation in MATLAB/Octave. Because special characters can not be used as structure
   field names, we converted range operators `xxxxx..xxxxx` to `From_xxxxx_to_xxxxx`, and replaced
   "/", "(", ")" and "," to "_"
+
+The `gbff2json.pl` converter requires the `JSON` and `Tie::IxHash` perl modules, which can be
+install via
+```
+sudo apt-get install libtie-ixhash-perl libjson-perl 
+```
+on Ubuntu/Debian used Linux, or run `perl -MCPAN -e shell` and type
+```
+install JSON
+install Tie::IxHash
+```
+in the CPAN shell to install these modules. If the cpan command is installed on your OS, 
+you may install those directly using the below commands.
+```
+cpan JSON
+cpan Tie::IxHash
+```
 
 ## Contribute to this project
 
