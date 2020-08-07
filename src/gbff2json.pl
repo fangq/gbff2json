@@ -30,6 +30,7 @@ my ($key1, $key2, $key3, $originkey)=("","","","Origin");
 my ($lastobj,$value, $options);
 my %jsonopt=(utf8 => 1, pretty => 1);
 
+my @objroot=();
 tie my %obj1, "Tie::IxHash";
 tie my %obj2, "Tie::IxHash";
 tie my %obj3, "Tie::IxHash";
@@ -49,7 +50,6 @@ while(my $opt = $ARGV[0]) {
 	last;
     }
 }
-
 while(<>){ # loop over each line of the input file
 	next if(/^\s*$/);  # skip empty lines
 	if(/^((\s*)(\S+)(\s+))(.*)/){  # line format: |$1=[(ws1=$2)key=$3(ws2=$4)]remaining=$5|
@@ -57,22 +57,26 @@ while(<>){ # loop over each line of the input file
 		$value=$4.$5;
 		if(length($2)==0){ # a first level key start at the begining of the line
 			if((keys %obj3)>0){ # attaching lower-level objects
-				push(@{$obj2{$key2}},rmap(\%obj3,$options));
+				push(@{$obj2{$key2}},rmap(\%obj3,$options,''));
 				%obj3=();
 				$key3="";
 			}
 			if((keys %obj2)>0){
-				push(@{$obj1{$key1}},rmap(\%obj2,$options));
+				push(@{$obj1{$key1}},rmap(\%obj2,$options,''));
 				%obj2=();
 				$key2="";
 			}
-			last if(/^\/\/$/);
+			next if(/^\/\/$/);
 			$key1= (!($options=~/C/)) ? ucfirst(lc($3)) : $3;
+			if(($key1 eq 'LOCUS' || $key1 eq 'Locus') && %obj1){ # handle multiple LOCUS records, Issue #2
+				push(@objroot, rmap(\%obj1, $options, $originkey));
+				%obj1=();
+			}
 			push(@{$obj1{$key1}}, $5) if $5 ne '';
 			$lastobj=$obj1{$3};
 		}elsif(length($2)<12){ # a second level key starts within 12 spaces from the beginning
 			if((keys %obj3)>0){  # attaching lower-level objects
-				push(@{$obj2{$key2}},rmap(\%obj3,$options));
+				push(@{$obj2{$key2}},rmap(\%obj3,$options,''));
 				%obj3=();
 				$key3="";
 			}
@@ -96,28 +100,27 @@ while(<>){ # loop over each line of the input file
 	}
 }
 
-%obj1=%{rmap(\%obj1,$options)};
-
-# concatenate ORIGIN hash values into a single string for easy lookup
-if($obj1{$originkey}){
-	$obj1{$originkey}=join('',map { $obj1{$originkey}{$_}} keys %{$obj1{$originkey}});
-	$obj1{$originkey}=~s/\s//g;
-}
+push(@objroot, rmap(\%obj1, $options, $originkey)) if(%obj1);
 
 # output the final JSON
 
-print to_json(\%obj1,\%jsonopt);
+if(@objroot==1){
+	print to_json($objroot[0],\%jsonopt);
+}else{
+	print to_json(\@objroot,\%jsonopt);
+}
 
 ###############################################################################
 
 sub rmap{
-	my ($obj,$opt)=@_;
+	my ($obj,$opt, $origin)=@_;
 	tie my %res, "Tie::IxHash";
 	%res= map { $_ => (ref($obj->{$_}) eq 'ARRAY' &&  @{$obj->{$_}}>0) 
 	              ? ( @{$obj->{$_}}==1 ? ${ $obj->{$_} }[0] : 
 		           (@{$obj->{$_}} %2 ==0 ? fixkey($obj->{$_},$opt) : $obj->{$_} ) )
 		      : $obj->{$_}
 	         } keys %{$obj};
+	concatvalue(\%res, $origin) if($origin ne '');
 	return \%res;
 }
 
@@ -138,4 +141,13 @@ sub validname{
 	$str=~s/[\s\/,()]/_/g;  # replace white spaces, commas and "/" by "_" without losing info
 	$str=~s/(\d+)\.\.(\d+)/From_$1_to_$2/g;  # replace start..end pairs by From_start_to_end
 	return $str;
+}
+
+# concatenate ORIGIN hash values into a single string for easy lookup
+sub concatvalue{
+	my ($obj, $origin)=@_;
+	if($obj->{$origin}){
+        	$obj->{$origin}=join('',map { $obj->{$origin}{$_}} keys %{$obj->{$origin}});
+	        $obj->{$origin}=~s/\s//g;
+	}
 }
